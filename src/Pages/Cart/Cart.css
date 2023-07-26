@@ -1,0 +1,38 @@
+.items .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.items .head h4{
+    margin: 0;
+}
+.items .item i{
+    transition: 0.2s;
+}
+.items .item i:hover{
+    color: var(--main-color);
+}
+.items .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.items .item img{
+    height: 6rem;
+    width: auto;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.total button{
+    background-color: var(--main-color);
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0rem 1rem;
+}

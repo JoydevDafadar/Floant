@@ -1,92 +1,269 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
-.item{
-    padding: 3rem 0rem;
-    display: flex;
-    align-items: flex-start;
+/* font-family: 'Merriweather',serif; */
+
+.container{
+    padding: 4rem 0rem;
     width: calc(100vw - 20rem);
+    display: flex;
 }
-.item .image{
-    position: relative;
-    width: 50%;
-}
-.item .image .sale{
-    position: absolute;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
+.container .left .search input{
+    height: 2.5rem;
+    padding: 0rem 0rem 0rem .5rem ;
     font-size: 1rem;
-    left: 0;
-    top: 0rem;
+    /* color: red; */
+    border: 1px solid rgba(4, 4, 4, 0.185);
+}
+.container .left{
+    width: calc(25% - 5rem);
+    padding-right: 5rem;
+    border-right: 1px solid #66666641;
+}
+.container .left .search{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.container .left h4{
+    margin-top: 3.5rem;
+}
+.container .left button{
+    height: 2.5rem;
+    padding: 0rem .8rem;
+    border-radius: 5px;
+    border: none;
     background-color: var(--main-color);
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0rem .5rem;
+}
+.container .left button:hover{
+    background-color: var(--main-hover-color);
+}
+.container .left h4{
+    font-family: 'Merriweather',serif;
+    /* font-weight: 900; */
+    font-size: 1.2rem;
+}
+.slider{
+    position: relative;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+.slider .progress{
+    height: 5px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 25%;
+    right: 25%;
+}
+.range-input{
+    position: relative;
+}
+.range-input input{
+    position: absolute;
+    height: 5px;
+    top: -3px;
+    width: 100%;
+    appearance: none;
+    pointer-events: none;
+    background: none;
+    border: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    border: none;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    pointer-events: auto;
+    background-color: var(--main-color);
+}
+input[type="range"]::-moz-range-thumb{
+    border: none;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    -moz-appearance: none;
+    pointer-events: auto;
+    background-color: var(--main-color);
+}
+
+.range-btn{
+    padding: 1rem 0rem;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.range-btn input{
+    opacity: 0.6;
+    font-size: 1rem;
+    padding: .5rem 0rem .5rem .5rem;
+    width: 3rem;
+    border: 1px solid #0000002c;
+}
+.tag {
+    margin: 8rem 0rem 1rem 0rem;
+}
+.tag p{
+    font-size: 1.05rem;
+}
+.tag p span{
+    color: var(--main-color);
+}
+.plant-item{
+    margin: 3rem 0rem;
+}
+.plant-item .item{
+    position: relative;
+    margin-bottom: 2rem;
+}
+.plant-item .item img{
+    width: 100%;
+}
+.plant-item .item p{
+    margin: .5rem 0rem;
+    padding: 0;
+    color: var(--main-color);
+}
+.plant-item .item::after{
+    content: "Sale";
+    font-size: .9rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: none;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: var(--main-color);
 }
-.item .image img{
-    /* margin: 3rem 0rem; */
-    width: 100%;
+.plant-item .item h5{
+    padding: 0rem;
+    margin: 0rem;
+    font-weight: 400;
+    font-size: 1.1rem;
 }
-.item .des{
-    width: calc(50% - 2rem);
-    padding: 0rem 2rem;
-}
-.item .des h2{
-    font-size: 2rem;
-    font-family: 'Playfair Display', serif;
-}
-.item .des .price{
-    display: flex;
-    align-items: center;
-}
-.item .des .price p{
-    margin: 0;
-}
-.item .des .main .price p:first-child{
+.plant-item .item h5 span{
     position: relative;
     opacity: 0.5;
-    padding:  0 0.2rem;
+    z-index: 1;
+    margin-right: .2rem;
 }
-.item .des .price p:first-child::after{
+.plant-item .item h5 span::after{
     position: absolute;
     content: "";
-    bottom: .8rem;
-    left: 0;
-    width: 100%;
-    height: .2rem;
     background-color: black;
+    height: 3px;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
     opacity: 0.5;
+    z-index: 2;
 }
 
-.item .des .price p:nth-child(1),
-.item .des .price p:nth-child(2){
-    font-size: 1.5rem;
-    font-weight: 600;
-} 
-.item .des .main p{
-    font-weight: 370;
+
+
+.container .right{
+    padding-left: 4rem;
+    width: calc(75%);
+    /* background-color: red; */
 }
-.item .des .main .atc{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
-    padding-bottom: 1rem;
+.container .right .head p{
+    margin: 0;
+    padding: 0;
+    opacity: 0.6;
 }
-.item .des .main .atc input{
-    width: 2rem;
-    height: 2rem;
-    padding: 0rem .5rem;
-    border: 1px solid rgba(0, 0, 0, 0.297);
-}
-.item .des .main .atc button{
-    height: 2rem;
-    margin: 0rem 2rem;
-    width: 18rem;
-    border: none;
-    background-color: var(--main-color);
-    font-weight: 600;
-    border-radius: 5px;
-    color: white;
-}
-.item .des .main p span{
-    text-decoration: underline;
+
+.container .right .head h2{
+    font-family: 'Merriweather',serif;
+    font-size: 2rem;
+    margin: 1rem 0rem 2rem 0rem;
     color: var(--main-color);
+}
+.container .right .body{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .right .body .flow-item{
+    width: 30%;
+    padding: 0rem 1rem 2rem 0rem;
+    position: relative;
+}
+.container .right .body .flow-item::after{
+    content: "Sale!";
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 0.8rem;
+    top: 0px;
+    right: 10px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+}
+.container .right .body .flow-item img{
+    width: 100%;
+}
+.container .right .body .flow-item p{
+    opacity: 0.6;
+    margin: .2rem 0rem;
+}
+.container .right .body .flow-item h6{
+    font-family: 'Merriweather',serif;
+    font-size: 1rem;
+    margin: .5rem 0rem;
+}
+.container .right .body .flow-item h5{
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0.3rem 0;   
+}
+.container .right .body .flow-item h5 span{
+    opacity: 0.5;
+    position: relative;
+    margin: 0rem .2rem;
+}
+.container .right .body .flow-item h5 span::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    bottom: 8px;
+    left: 0px;
+}
+.container .right .body .flow-item button{
+    position: absolute;
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    bottom: 40px;
+    right: 40px;
+}
+
+.right .filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0rem 3rem 0rem;
+}
+.right .filter select{
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
 }

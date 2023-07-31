@@ -1,15 +1,66 @@
 const Data = [
     {
-        name : "Mini Jade Plant",
-        price : 199.00,
-        img : "./product.webp",
-        des : "The Crassula Green Mini has lush foliage that beautifies any room and is one of the easiest indoor plants to care for. Bring some green home, and good fortune will come at no cost."
+        name : "15 Regal Carnations Basket",
+        tag : "Flower",
+        extra_price : 999,
+        price : 899,
+        img : "https://floant.com/wp-content/uploads/2022/11/f14-300x300.webp",
     },
     {
-        name : "Peace Lily Plant",
-        price : 299.00,
-        img : "./p7.webp",
-        des : "The larger cousin of the exquisite peace lily, the Spathiphyllum Sensation, is one of the most widely used peace lily varieties worldwide."
-    }
+        name : "6 Pink Asiatic Lilies Bouquet",
+        tag : "Best Selling Product",
+        extra_price : 1499,
+        price : 1299,
+        img : "https://floant.com/wp-content/uploads/2022/11/f10.webp",
+    },
+    {
+        name : "Fairytale Pink Roses Bunch",
+        tag : "Flower",
+        extra_price : 1299,
+        price : 1299,
+        img : "https://floant.com/wp-content/uploads/2022/11/f8.webp",
+    },
+    {
+        name : "Love- 8 Colourful Asiatic Lilies",
+        tag : "Best Selling Product",
+        extra_price : 1499,
+        price : 1199,
+        img : "https://floant.com/wp-content/uploads/2022/11/f1.webp",
+    },
+    {
+        name : "Mixed Flowers & Ferrero Rocher Arrangement",
+        tag : "Flower",
+        extra_price : 2999,
+        price : 2599,
+        img : "https://floant.com/wp-content/uploads/2022/11/f17-300x300.webp",
+    },
+    {
+        name : "Orange Asiatic Lilies Bouquet",
+        tag : "Best Selling Products",
+        extra_price : 1399,
+        price : 1199,
+        img : "https://floant.com/wp-content/uploads/2022/11/f3-300x300.webp",
+    },
+    {
+        name : "Pretty In Pink Roses Bunch",
+        tag : "Flowers",
+        extra_price : 1999,
+        price : 1799,
+        img : "https://floant.com/wp-content/uploads/2022/11/f9.jpeg",
+    },
+    {
+        name : "Purple Orchids Bouquet",
+        tag : "Flowers",
+        extra_price : 1199,
+        price : 999,
+        img : "https://floant.com/wp-content/uploads/2022/11/f13.webp",
+    },
+    {
+        name : "Ravishing 40 Red Roses Box Arrangement",
+        tag : "Flowers",
+        extra_price : 1799,
+        price : 1599,
+        img : "https://floant.com/wp-content/uploads/2022/11/f6.jpeg",
+    },
 ]
-export default Data
+export default Data;

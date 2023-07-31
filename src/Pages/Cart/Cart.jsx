@@ -46,10 +46,12 @@ const Cart = () => {
         {cartData.map((ele, ind) => {
           return(
             <>
-            <div className="item" id={ind}>
+            <div className="item" key={ind}>
               <p onClick={() => {dispatch(removeItem(ele.id))}}><i className="fa-solid fa-trash"></i></p>
-              <img src="./product.webp" alt="img7788" />
-              <p>{ele.name}</p>
+              <img src={ele.image} alt="img7788" />
+              <p style={{
+                width : "10rem"
+              }}>{ele.name}</p>
               <p>{ele.quantity}</p>
               <p>{ele.price}.00</p>
             </div>
